@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/issAPIWeb/style.css" />
     <title>ISS Live Location API - Michael Grigoryan</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-        <label for="#longitude">Longitude</label>
-        <div id="longitude">
+      <!-- Longitude -->
+      <label for="#longitude">Longitude:&nbsp;</label>
+      <pre>
+            <span id="longitude"></span>
+        </pre>
+      <br />
 
-        </div>
-        <label for="#latitude">Latitude</label>
-        <div id="latitude">
+      <!-- Latitude -->
+      <label for="#latitude">Latitude:&nbsp;</label>
+      <pre>
+            <span id="latitude"></span>
+        </pre>
+      <br />
 
-        </div>
+      <!-- Timestamp -->
+      <label for="#timestamp">Timestamp:&nbsp;</label>
+      <pre>
+            <span id="timestamp"></span>
+        </pre>
+
+      <br />
+      <label for="#message">Message:&nbsp;</label>
+      <pre>
+            <span id="message"></span>
+        </pre>
+
+      <br />
+      <label for="#status">API Status:&nbsp;</label>
+      <pre>
+            <span id="status"></span>
+        </pre>
     </div>
-    <script src="/js/issAPIWeb/script.min.js"></script>
-</body>
+    <script src="/js/issAPIWeb/script.js"></script>
+  </body>
 </html>
