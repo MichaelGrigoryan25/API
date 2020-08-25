@@ -28,5 +28,4 @@ setInterval(
   liveUpdate,
   reqSpeed
 );
-
 console.log("%cConnected to the Server", "color: lightgreen");
