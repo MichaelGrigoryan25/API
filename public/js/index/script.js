@@ -1,1 +1,0 @@
-console.log("%cConnected to the Server", "color: lightgreen")

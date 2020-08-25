@@ -14,11 +14,4 @@ router.get("/", async (req, res) => {
   res.json(response);
 });
 
-// function issFetch() {
-//   fetch("http://api.open-notify.org/iss-now.json")
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-
-// }
-
 module.exports = router;
