@@ -1,13 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const { static } = require("express");
 const app = express();
-const router = express.Router();
+
+const issRoute = require("./routes/iss-location");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(bodyParser.json());
-
-app.get("/", (req, res) => {});
+app.set("view engine", "ejs");
+app.set("views", "./views")
+app.use("/iss", issRoute);
 
 module.exports = app;
