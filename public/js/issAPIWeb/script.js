@@ -7,7 +7,7 @@ const url = "/iss-api";
 
 // Limit the API request speed
 var reqSpeed = prompt(
-  "Enter the interval time in miliseconds(e.g. 1000ms = 1s)"
+  "Enter the interval time in miliseconds(e.g. 1000ms = 1s). The value should be bigger than 600ms"
 );
 if (reqSpeed <= 600) {
   reqSpeed = 1000;
