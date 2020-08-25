@@ -27,7 +27,7 @@ body {
   text-align: center;
 }
 
-div.card {
+.card {
   align-content: center;
   align-self: center;
   align-items: center;
@@ -36,6 +36,7 @@ div.card {
   justify-content: center;
   text-align: center;
   text-align-last: center;
-  margin: 10rem;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 150px;
 }
-

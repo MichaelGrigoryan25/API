@@ -34,7 +34,7 @@ body {
   text-align: center;
 }
 
-div.card {
+.card {
   -ms-flex-line-pack: center;
       align-content: center;
   -ms-flex-item-align: center;
@@ -51,6 +51,8 @@ div.card {
           justify-content: center;
   text-align: center;
   text-align-last: center;
-  margin: 10rem;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 150px;
 }
 /*# sourceMappingURL=style.css.map */
