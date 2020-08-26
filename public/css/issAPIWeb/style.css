@@ -17,4 +17,8 @@ body {
 .container {
   position: fixed;
 }
+
+#map {
+  height: 100%;
+}
 /*# sourceMappingURL=style.css.map */
