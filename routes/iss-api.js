@@ -23,6 +23,7 @@ router.get("/", async (req, res) => {
   const response = await fetch(url, options)
     .then((res) => res.json())
     .catch((e) => console.log(e));
+  res.set('Cache-Control', 'max-age=0') // Max age of cache is 0 seconds
   res.json({
     details: response,
     apiStatus: apiStatus,
