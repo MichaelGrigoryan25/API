@@ -43,9 +43,15 @@
         </pre>
     </div>
 
+    <br>
+
     <div style="position: absolute; width: 50%; top: 0; right: 0; height: 100%;">
       <div id="map"></div>
     </div>
+
+    <h6 style="position: absolute; bottom: 0; margin: 0 auto; margin-bottom: 25px;margin-left: 25px;">
+      The data updates every one second
+    </h6>
 
     <script
       async
@@ -74,7 +80,7 @@
         updateMap(map, marker);
         setInterval(() => {
           updateMap(map, marker);
-        }, reqSpeed);
+        }, 1000);
 
         // Get current location --> Promise
         function updateMap(map, marker) {

@@ -8,14 +8,14 @@ const apiStatusCont = document.getElementById("status");
 const url = "/iss-api";
 
 // Limit the API request speed
-var reqSpeed = prompt(
-  "Enter the interval time in miliseconds(e.g. 1000ms = 1s). The value should be bigger than 600ms"
-);
-if (reqSpeed <= 600) {
-  reqSpeed = 1000;
-} else {
-  reqSpeed = reqSpeed;
-}
+// var reqSpeed = prompt(
+//   "Enter the interval time in miliseconds(e.g. 1000ms = 1s). The value should be bigger than 600ms"
+// );
+// if (reqSpeed <= 600) {
+//   reqSpeed = 1000;
+// } else {
+//   reqSpeed = reqSpeed;
+// }
 
 function liveUpdate() {
   var data = new XMLHttpRequest();
@@ -32,7 +32,7 @@ function liveUpdate() {
   }
 }
 
-setInterval(liveUpdate, reqSpeed);
+setInterval(liveUpdate, 1000);
 console.log("%cConnected to the Server", "color: lightgreen");
 
 // Google Maps JS API
