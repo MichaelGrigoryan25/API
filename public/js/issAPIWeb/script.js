@@ -32,7 +32,7 @@ function liveUpdate() {
   }
 }
 
-setInterval(liveUpdate, 1000);
+setInterval(liveUpdate, 10000);
 console.log("%cConnected to the Server", "color: lightgreen");
 
 // Google Maps JS API
