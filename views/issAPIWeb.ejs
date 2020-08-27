@@ -71,9 +71,11 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script>
-      
-      console.log("%cConnected to the Server", "color: lightgreen");
-      
+      const longitudeSp = document.getElementById("longitude");
+      const latitudeSp = document.getElementById("latitude");
+      const timestampSp = document.getElementById("timestamp");
+      const apiStatusContSp = document.getElementById("status");
+
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
@@ -84,11 +86,6 @@
         $("#map").show();
       }
       hideMap();
-
-      const longitudeSp = document.getElementById("longitude");
-      const latitudeSp = document.getElementById("latitude");
-      const timestampSp = document.getElementById("timestamp");
-      const apiStatusContSp = document.getElementById("status");
 
       // Set the initial location of the marker (0,0) with zoom of 4
       const map = L.map("map").setView([0, 0], 4);
@@ -138,6 +135,7 @@
 
       // Auto update every 10 seconds
       setInterval(getISS, 10000);
+      console.log("%cConnected to the Server", "color: lightgreen");
     </script>
   </body>
 </html>
