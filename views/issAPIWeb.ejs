@@ -43,13 +43,21 @@
         </pre>
     </div>
 
-    <br>
+    <br />
 
-    <div style="position: absolute; width: 50%; top: 0; right: 0; height: 100%;">
+    <div style="position: absolute; width: 50%; top: 0; right: 0; height: 100%">
       <div id="map"></div>
     </div>
 
-    <h6 style="position: absolute; bottom: 0; margin: 0 auto; margin-bottom: 25px;margin-left: 25px;">
+    <h6
+      style="
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        margin-left: 25px;
+      "
+    >
       The data updates every one second
     </h6>
 
@@ -59,7 +67,6 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg2ArSsIdvnBxfmtjy8ZukBgUX1GJwQtI&callback=initMap"
     ></script>
     <script>
-      
       function initMap() {
         var map = new google.maps.Map(document.getElementById("map"), {
           zoom: 4,
@@ -107,19 +114,17 @@
           XHR.onload = function () {
             let location = {};
             if (XHR.readyState === 4 && XHR.status === 200) {
-              let latitude = JSON.parse(
-                XHR.responseText
-              ).details.iss_position.latitude
-              let longitude = JSON.parse(
-                XHR.responseText
-              ).details.iss_position.longitude
+              let latitude = JSON.parse(XHR.responseText).details.iss_position
+                .latitude;
+              let longitude = JSON.parse(XHR.responseText).details.iss_position
+                .longitude;
 
               location = {
                 lat: Number(latitude),
                 lng: Number(longitude),
               };
               resolve(location);
-              console.log(location)
+              console.log(location);
             } else {
               reject(XHR.statusText);
             }
