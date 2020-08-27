@@ -110,7 +110,7 @@
         return new Promise((resolve, reject) => {
           let XHR = new XMLHttpRequest();
 
-          XHR.open("GET", "http://api.michaelgrigoryan.com/iss-api");
+          XHR.open("GET", "/iss-api");
           XHR.onload = function () {
             let location = {};
             if (XHR.readyState === 4 && XHR.status === 200) {
