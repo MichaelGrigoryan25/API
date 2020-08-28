@@ -1,6 +1,4 @@
-# API
-Official website: http://api.michaelgrigoryan.com
-[![Run on Repl.it](https://repl.it/badge/github/MichaelGrigoryan25/API)](https://repl.it/github/MichaelGrigoryan25/API)
+# Michael Grigoryan - API
 
 ### Live ISS(International Space Station) Position API
 API Link: http://api.michaelgrigoryan.com/iss-api
@@ -28,14 +26,14 @@ Example: http://api.michaelgrigoryan.com/iss
 ```json
 {
   "details": {
-      "timestamp": UNIX_TIME_STAMP,
+      "timestamp": UNIX_TIME_STAMP(Num),
       "iss_position": {
-          "longitude": CURRENT_LATITUDE,
-          "latitude": CURRENT_LONGITUDE
+          "longitude": CURRENT_LATITUDE(Num),
+          "latitude": CURRENT_LONGITUDE(Num)
       },
-      "message": "success"
+      "message": "success"(String)
   },
-  "apiStatus": CURRENT_API_STATUS
+  "apiStatus": CURRENT_API_STATUS(String)
 }
 ```
 ###### Special thanks to [open-notify.org](http://open-notify.org/Open-Notify-API/ISS-Location-Now/) for providing real-time data.
@@ -62,9 +60,9 @@ Example: http://api.michaelgrigoryan.com/random-number
 ```json  
 {
     "results": {
-        "randomNum": RANDOM_NUMBER,
-        "randomInt": RANDOM_INTEGER
+        "randomNum": RANDOM_NUMBER(Num),
+        "randomInt": RANDOM_INTEGER(Int)
     },
-    "apiStatus": API_STATUS
+    "apiStatus": API_STATUS(Str)
 }
 ```
