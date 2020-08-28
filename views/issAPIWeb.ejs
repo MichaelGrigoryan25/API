@@ -12,6 +12,7 @@
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     />
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="/css/issAPIWeb/style.css" />
     <title>ISS Live Location API - Michael Grigoryan</title>
@@ -56,6 +57,37 @@
     >
       <div id="map"></div>
     </div>
+    <div
+      id="map-info"
+      style="
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-right: 320px;
+        margin-bottom: 100px;
+      "
+    >
+      Initializing the Map
+    </div>
+
+    <div
+      id="iframe-container"
+      style="
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 50px;
+        margin-left: 25px;
+      "
+    >
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/EEIk7gwjgIM"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
 
     <h6
       style="
@@ -77,6 +109,7 @@
 
       // Set the initial location of the marker (0,0) with zoom of 4
       const map = L.map("map").setView([0, 0], 7);
+      L.terminator().addTo(map);
 
       // Set the icon for the ISS
       const icon = L.icon({
@@ -118,7 +151,19 @@
         marker.setLatLng([latitude, longitude]);
       }
 
+      function sleep(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function changeMapInfoText() {
+        await sleep(10000);
+        document.getElementById("map-info").innerHTML = "Initialized";
+        await sleep(5000);
+        document.getElementById("map-info").innerHTML = "";
+      }
+
       // Auto update every 10 seconds
+      changeMapInfoText();
       setInterval(getISS, 10000);
       console.log("%cConnected to the Server", "color: lightgreen");
     </script>
