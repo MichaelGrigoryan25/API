@@ -53,8 +53,8 @@ function sleep(ms) {
 
 async function changeMapInfoText() {
     await sleep(10000);
-    document.getElementById("map-info").innerHTML = "Initialized";
-    await sleep(5000);
+    document.getElementById("map-info").innerHTML = "<h5>Initialized</h5?";
+    await sleep(3000);
     document.getElementById("map-info").innerHTML = "";
 }
 
