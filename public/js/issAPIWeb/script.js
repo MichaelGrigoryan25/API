@@ -3,6 +3,10 @@ const latitudeSp = document.getElementById("latitude");
 const timestampSp = document.getElementById("timestamp");
 const apiStatusContSp = document.getElementById("status");
 
+/*
+ * LEAFLET MAP START
+ */ 
+
 // Set the initial location of the marker (0,0) with zoom of 4
 const map = L.map("map").setView([0, 0], 7);
 L.terminator().addTo(map);
@@ -23,6 +27,9 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
+/*
+ * LEAFLET MAP END
+ */ 
 
 async function getISS() {
     // Make an async request to the API
